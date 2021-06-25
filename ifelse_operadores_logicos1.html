@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If/Else Operadores Lógicos | JavaScript</title>
+    <script>
+        var nota, falta, maxFalta, minNota;
+
+        maxFalta = 15;
+        minNota = 7;
+        nota = prompt('Digite a nota do(a) aluno(a):');
+        falta = prompt('Digite as faltas do(a) aluno(a):');
+        nota = parseInt(nota);
+        falta = parseInt(falta);
+
+        console.log(nota);
+        console.log(falta);
+
+        if ((nota>=minNota) && (falta<maxFalta)){
+            document.write('O aluno foi aprovado com nota ' + nota + ' e ' + falta + ' faltas!');
+        }else{
+            document.write('O aluno foi reprovado com nota ' + nota + ' e ' + falta + ' faltas.')
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
