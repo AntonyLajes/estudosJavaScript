@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function | JavaScript</title>
+    <script>
+
+        function calcularAreaTerreno(largura, altura){
+            var area = largura * altura;
+
+            return area;
+        }
+
+        var largura = parseFloat(prompt('Digite a largura do terreno em metros:'));
+        var altura = parseFloat(prompt('Digite a altura do terreno em metros:'));
+        var area = calcularAreaTerreno(largura, altura);
+
+        document.write('A área do terreno é: ' + area + ' metros quadrados');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
