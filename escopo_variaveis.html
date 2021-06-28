@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo de  variáveis | JavaScript</title>
+    <script>
+
+        var serieGlobal = 'Game of Thrones';
+
+        if(true){
+            var serieBloco = 'The Walking Dead'; //escopos de variaveis de blocos sofrem hoisting
+        }
+
+        function serieFunction(){
+            var serieFuncao = 'Scream'; //escopos de variaveis de funções nao sofrem hoisting
+        }
+
+        document.write(serieGlobal + '<br/>');
+        document.write(serieBloco + '<br/>');
+        document.write(serieFuncao + '<br/>');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
