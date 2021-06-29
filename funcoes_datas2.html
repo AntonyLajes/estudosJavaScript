@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções de datas | JavaScript</title>
+    <script>
+
+    var data = new Date(); //para usar as propriedades de Date precisamos instanciar uma variavel
+
+    //adicionar / remover dias
+    document.write(data.toString()); //mostra a data como string
+    data.setDate(data.getDate() + 1); //adicionaar ou remover dias na data
+    document.write('<hr/>');
+    document.write(data.toString()) //mostra a data como string
+    document.write('<br/>');
+
+    //adicionar / remover meses
+    data.setMonth(data.getMonth() + 1); //adicionaar ou remover meses na data
+    document.write('<hr/>');
+    document.write(data.toString()) //mostra a data como string
+    document.write('<br/>');
+
+    //adicionar / remover anos
+    data.setFullYear(data.getFullYear() + 1); //adicionaar ou remover meses na data
+    document.write('<hr/>');
+    document.write(data.toString()) //mostra a data como string
+    document.write('<br/>');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

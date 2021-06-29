@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções de datas | JavaScript</title>
+    <script>
+
+    var data1 = new Date(2021, 05, 29); //para usar as propriedades de Date precisamos instanciar uma variavel
+    var data2 = new Date(2021, 05, 31);
+
+    document.write(data1.toString());
+    document.write('<br/>');
+    document.write(data2.toString());
+    document.write('<br/><br/><hr/>');
+    
+    var diferenca_milissegundos_entre_datas = Math.abs((data1.getTime()) - (data2.getTime()));
+    var millisegundos_em_um_dia = (1*24*60*60*1000);
+
+    var millisegundos_totais = Math.ceil(diferenca_milissegundos_entre_datas / millisegundos_em_um_dia);
+
+    document.write('A diferença entre a data 1 e a data 2 é: ' + millisegundos_totais + ' dia(s)');
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

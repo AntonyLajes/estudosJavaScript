@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções de datas | JavaScript</title>
+    <script>
+
+    var data = new Date(); //para usar as propriedades de Date precisamos instanciar uma variavel
+
+    document.write(data.getDate() + '<br/>'); //obtem o dia do mes
+    document.write(data.getMonth() + 1 + '<br/>'); //obtem o mes do ano, mas apenas representa de 0-11, por isso temos que somar com +1
+    document.write(data.getFullYear() + '<br/>');
+
+    document.write(data.getDate() + ' / ' + parseInt(data.getMonth() + 1) + ' / ' + data.getFullYear());
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
