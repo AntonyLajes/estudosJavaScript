@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funções anônimas e Técnica de Wrapper | JavaScript</title>
+    <title>Funções de Strings | JavaScript</title>
     <script>
 
     var stringNome = 'João da Silva'
@@ -12,6 +12,11 @@
     document.write(stringNome.length + '<br/>'); //mostra a quantidade de caracteres na string
     document.write(stringNome.charAt(8) + '<br/>'); //mostra o caractere contido em certa posição da string
     document.write(stringNome.indexOf('a') + '<br/>'); //mostra a primeira posição de um caractere específico
+    document.write(stringNome.replace('da Silva', 'dos Santos') + '<br/>'); //substitui uma cadeia de caracteres por outra
+    document.write(stringNome.substr(8, 5) + '<br/>'); //mostra o caractere de uma posição seguida de quantas posições de preferencia
+    document.write(stringNome.toLowerCase() + '<br/>') //mostra todos os caracteres em minusculo
+    document.write(stringNome.toUpperCase() + '<br/>') //mostra todos os caracteres em maiusculo
+    document.write('-' + stringNome.trim() + '-') //remove caracteres em brancos
 
     </script>
 </head>
