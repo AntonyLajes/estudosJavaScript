@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções de datas | JavaScript</title>
+    <script>
+        function mudarCor(corDeFundo){
+            
+            document.getElementById('divCaixa').style.background = corDeFundo;
+
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Manipulando estilos</h2>
+    <button type="button" style="background-color: #FF0000; cursor: pointer;" onclick="mudarCor('#FF0000')">Vermelho</button>
+    <button type="button" style="background-color: #00FF00; cursor: pointer;" onclick="mudarCor('#00FF00')">Verde</button>
+    <button type="button" style="background-color: #0000FF; cursor: pointer;" onclick="mudarCor('#0000FF')">Azul</button>
+
+    <hr>
+
+    <div style="height: 200px;width: 200px; border: 1px solid rgb(0, 0, 0);" id="divCaixa">
+
+    </div>
+
+</body>
+</html>
