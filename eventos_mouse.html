@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos mouse | JavaScript</title>
+    <script>
+
+    //é possivel criar eventos com mouse. usamos dentro da propria tag de abertura de uma tag. ver documentação para saber mais
+    function acao1(){
+        alert('Evento de ação 1');
+    }
+
+    function acao2(){
+        alert('Evento de ação 2');
+    }
+    </script>
+</head>
+<body>
+    
+    <div onclick="acao1()" style="background-color: #ccc; height: 300px; width: 300px;">
+
+    </div>
+
+    <!--podemos usar mais de 1 evento por tag-->
+
+    <div onclick="acao1()" onmouseout="acao2()" style="background-color: rgb(174, 152, 255); height: 300px; width: 300px; margin-top: 50px;">
+
+    </div>
+
+</body>
+</html>
