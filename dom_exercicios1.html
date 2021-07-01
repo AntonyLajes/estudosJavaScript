@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios DOM manipulando informações</title>
+    <script>
+        function obterCaractere(){
+            var caractere = document.getElementById('entrada').value;
+
+            document.getElementById('entrada').value = '';
+
+
+            switch(caractere){
+                case '0':
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    document.getElementById('apenas_numero').value += caractere;
+                    break;
+                default:
+                    document.getElementById('apenas_letra').value += caractere;
+                    break;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+
+    Entrada:
+    <input type="text" onkeyup="obterCaractere()" id="entrada">
+    <hr>
+    <span>Letra:</span>
+    <input type="text" id="apenas_letra">
+    <span>Numero:</span>
+    <input type="text" id="apenas_numero">
+</body>
+</html>
