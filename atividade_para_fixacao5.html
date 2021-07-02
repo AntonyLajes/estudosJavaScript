@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade para fixação 4 | JavaScript</title>
+    <script>
+        var objetos = Array('Cadeira','Impressora','Garfo');
+
+        function recuperarDado(){
+
+            if(document.getElementById('campoText').value === ''){
+                alert('Informe um valor válido');
+            }else{
+                objetos.push(document.getElementById('campoText').value);
+
+                console.log(objetos);
+
+                document.getElementById('campoText').value = '';
+            }
+        }
+
+        function ordenarDados(){
+            objetos.sort();
+
+            console.log(objetos)
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="campoText">
+    <button onclick="recuperarDado()">Adicionar</button>
+    <button onclick="ordenarDados()">Ordenar</button>
+</body>
+</html>

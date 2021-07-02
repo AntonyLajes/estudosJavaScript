@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenação em array | JavaScript</title>
+    <script>
+        
+        var lista_frutas = Array();
+
+        lista_frutas[0] = 'Uva';
+        lista_frutas[1] = 'Maça';
+        lista_frutas[2] = 'Banana';
+        lista_frutas[3] = 'Pera';
+
+        console.log(lista_frutas.sort()); //ordena a lista alfabeticamente
+
+        //para ordenar numericamente, temos que usar uma função callback dentro da funcao sort
+        var lista_numeros = Array();
+
+        lista_numeros[0] = 11
+        lista_numeros[1] = 2
+        lista_numeros[2] = 19
+        lista_numeros[3] = 40
+        lista_numeros[4] = 31
+        lista_numeros[5] = 1
+
+        console.log(lista_numeros.sort(ordenar)) //callback em ação
+
+        function ordenar(a, b){
+            return a - b;
+            //caso o resultado seja <0 a fica antes de b, caso seja >0 b fica antes de a, caso seja == eles se mantem na posicao atual
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

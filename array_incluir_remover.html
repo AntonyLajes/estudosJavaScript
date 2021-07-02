@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções de datas | JavaScript</title>
+    <script>
+        
+        var lista = Array();
+
+        lista[0] = 'banana';
+        lista[1] = 'maça';
+        lista[2] = 'uva';
+        
+        //adicionar elemento ao final do array
+        //lista.push('limão');
+
+        //adicionar elemento ao inicio do array
+        lista.unshift('mamão');
+
+        //remove elemento do final do array
+        //lista.pop();
+
+        //remove elemento do final do array
+        lista.shift();
+
+        console.log(lista);
+
+        //inclusao em array multidimensional
+
+        var lista_coisas = Array();
+
+        lista_coisas['nome'] = Array(); //uma forma de declarar um array
+        lista_coisas['objetos'] = []; //outra forma de declarar um array
+
+        lista_coisas['nome'].unshift('jose'); //adição de valor no inicio do array
+        lista_coisas['nome'].push('adriana'); //adição de valor no fim do array
+        lista_coisas['nome'].push('carlos'); //adição de valor no fim do array
+
+        lista_coisas['nome'].shift(); //remoção do inicio do array
+        lista_coisas['nome'].pop(); //remoção do fim do array
+
+        console.log(lista_coisas);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa em array | JavaScript</title>
+    <script>
+        
+        var lista_frutas = Array();
+
+        lista_frutas[0] = 'Banana';
+        lista_frutas[1] = 'Maça';
+        lista_frutas[2] = 'Pera';
+        lista_frutas[3] = 'Uva';
+
+        console.log(lista_frutas.indexOf('Pera')); //indexof é a função para procurar um determinado valor
+
+        if(lista_frutas.indexOf('Maça') === -1){ //função para chegar se valor existe, caso não, a função retornará -1
+            console.log('Fruta não encontrada');
+        }else{
+            console.log('Fruta encontrada na posição ' + lista_frutas.indexOf('Maça'));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
