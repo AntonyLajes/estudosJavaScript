@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laços de repetição - Prática 1 | JavaScript</title>
+    <script>
+        
+        //no forin a variavel recebe o nome/posicao do array como parametro
+
+        let repeticao = Array();
+
+        repeticao[11] = 'Jose';
+        repeticao['arroz'] = 'Carlos';
+        repeticao[-1] = 'Maria';
+        repeticao['macaco'] = 'Ana';
+        repeticao[true] = 'Julia';
+
+        for(var x in repeticao){
+            document.write('O valor da posição ' + x + ' no array é: ' + repeticao[x] + '</br>');
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
