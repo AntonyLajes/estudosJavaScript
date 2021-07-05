@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com parâmetros variáveis | JavaScript</title>
+    <script>
+
+        function soma(){
+            var resultado = 0; //definimos o valor para mostrar que a variavel e um number
+            for( i in arguments){
+                resultado += arguments[i];
+            }
+
+            return resultado;
+        }
+
+        function testeArguments(){
+            console.log(arguments)
+        }
+
+        console.log(soma(25, 1, 0.4, ' Teste')); //podemos passar quantos valores quisermos dinamicamente
+
+        console.log(testeArguments(23, 1, 0.6, 31.1, ' Teste'));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

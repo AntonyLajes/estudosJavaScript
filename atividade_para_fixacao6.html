@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atividade para fixação 4 | JavaScript</title>
+        <script>
+            var lista = Array();
+
+            lista[0] = 'Banana';
+            lista[1] = 'Maça';
+            lista[2] = 'Uva';
+            lista[3] = 'Pera';
+
+            for(var x = 0; x<lista.length; x++){
+                document.write(lista[x] + '<br/>');
+            }
+
+            document.write('<hr>');
+
+            var x, y;
+
+            x = 0;
+            y = 0;
+
+            while(x<=10){
+                while (y<=10) {
+                    document.write(x + ' x ' + y + ' = ' + (x*y) + '<br/>');
+
+                    y++;
+
+                }
+
+                y = 0;
+                x++;
+
+                document.write('<br/>');
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

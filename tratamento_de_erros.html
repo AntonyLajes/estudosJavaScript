@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de erros | JavaScript</title>
+    <script>
+        //Usamos o tratamento de erro para fazer com que o script nao pare de rodar quando houver algum erro, o que é muito comum em uma aplicação
+
+        var filme = Array();
+
+        filme[1] = Array();
+        filme[1]['nome'] = 'Pequena Sereia';
+        filme[1]['genero'] = 'Desenho';
+
+        console.log(filme[1])
+
+        //caso eu tente mostrar outro array multidimensional ira dar erro. Para que a aplicação nao pare, usamos o try, catch e o finally
+
+        /*throw new Error('Houve um erro');
+        o throw anda de contramao com o try, catch e finally, pois, independente do que acontecer, ele ira parar a aplicacao
+        */
+
+        try{
+            console.log(filme[0]['nome']);
+        }catch(erro){
+            //Com o catch, podemos obter o erro para tratálo, assim, podemos mandá-lo para a equipe de dev resolverem
+        }
+        finally{
+            console.log('Estamos trabalhando para consertar o erro')
+        }
+
+        console.log('A aplicação nao parou')
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

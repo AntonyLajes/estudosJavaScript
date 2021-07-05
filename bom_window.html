@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bom Window | JavaScript</title>
+        <script>
+            var janela;
+
+            //verificar documentação
+            function abrirPopUp(){
+                janela = window.open('https://www.google.com.br', 'google-janela', 'width=500, heigth=400');
+            }
+
+            function fecharPopUp(){
+                janela.close();
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="abrirPopUp()">Abrir janela</button>
+        <button onclick="fecharPopUp()">Fechar janela</button>
+        <button onclick="window.print()">Imprimir página</button>
+    </body>
+</html>
