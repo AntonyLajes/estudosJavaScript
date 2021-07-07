@@ -12,18 +12,18 @@
 
         <div class="painel">
             <div class="vidas">
-                <img src="./imagens/coracao_vazio.png" alt="coração vazio">
-                <img src="./imagens/coracao_cheio.png" alt="coração vazio">
-                <img src="./imagens/coracao_cheio.png" alt="coração vazio">
+                <img id="v1" src="./imagens/coracao_cheio.png" alt="coração vazio">
+                <img id="v2" src="./imagens/coracao_cheio.png" alt="coração vazio">
+                <img id="v3" src="./imagens/coracao_cheio.png" alt="coração vazio">
             </div>
             <div class="cronometro">
-                Tempo restante: ?
+                Tempo restante: <span id="tempoCronometro"></span>
             </div>
         </div>
 
         <script>
-
-            setInterval(function(){posicaoRandomica()}, 1000);
+            document.getElementById('tempoCronometro').innerHTML = tempo; //para fazer com que o cronometro comece com o tempo desejado
+            var criaMosca = setInterval(function(){posicaoRandomica()}, criaMoscaTempo);
             
         </script>
     </body>

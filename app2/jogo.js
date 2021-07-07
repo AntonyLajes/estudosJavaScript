@@ -1,5 +1,19 @@
 var altura = 0;
 var largura = 0;
+var vidas = 1;
+var tempo = 10;
+var criaMoscaTempo = 1500;
+
+var nivel = window.location.search; //para recebermos o que esta depois do caractere ?
+nivel = nivel.replace('?', '');//tiramos o ? e substituimos por nada
+
+if(nivel === 'normal'){
+    var criaMoscaTempo = 1500;
+}else if(nivel === 'dificil'){
+    var criaMoscaTempo = 1000;
+}else if(nivel === 'chucknorris'){
+    var criaMoscaTempo = 750;
+}
 
 function obterTamanhoTela(){
     altura = window.innerHeight;
@@ -11,11 +25,31 @@ function obterTamanhoTela(){
 
 obterTamanhoTela();
 
+var cronometro = setInterval(function(){
+    tempo -= 1;
+    
+    if(tempo<0){
+        clearInterval(cronometro); //para o intervalo de repetição eliminando a funcao da memoria da aplicacao
+        clearInterval(criaMosca);
+        window.location.href = 'vitoria.html';
+    }else{
+        document.getElementById('tempoCronometro').innerHTML = tempo; //innerhtml serve para adicionar entre as tags html
+    }
+}, 1000)
+
 function posicaoRandomica(){
 
     //remover a mosca anterior caso exista
     if(document.getElementById('mosca')){
         document.getElementById('mosca').remove();
+
+        if(vidas > 3){
+            window.location.href = 'fim_de_jogo.html'; //pagina redirecionada
+        }
+
+        document.getElementById('v' + vidas).src = "./imagens/coracao_vazio.png";
+
+        vidas++;
     }
 
     var posicaoX = Math.floor(Math.random() * largura) - 90;
@@ -35,6 +69,9 @@ function posicaoRandomica(){
     mosca.style.left = posicaoX + 'pX'; //posicao em relação a margem esquerda
     mosca.style.top = posicaoY + 'pX'; //posicao em relação a margem top
     mosca.id = 'mosca'
+    mosca.onclick = function(){
+        this.remove(); //como a função esta linkada a variavel mosca, podemos usar o this para mostrar que queremos selecionar o proprio elemento
+    }
     
     document.body.appendChild(mosca); //coloca o novo elemento atribuido a uma variavel dentro do body, se fosse o head teria que ser document.head.appendChild(mosca); e assim por diante
 
